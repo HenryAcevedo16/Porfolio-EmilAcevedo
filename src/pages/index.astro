@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Email from "../components/icons/Email.astro";
+import Repo from "../components/icons/Repo.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="/public/DSC_1859.jpg"
+        alt="Foto de Emil Acevedo"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, Soy Emil Acevedo<a
+          href="https://www.linkedin.com/in/emilacevedo/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        <span>Soy un Desarrollador Web </span><span class="text-red-200/90"
+          >con sede en Santo Domingo, República Dominicana</span
+        >. <span class="text-yellow-200/90"
+          >Me especializo en Desarrollo Web utilizando HTML, CSS, JavaScript y
+          React.</span
+        >
+        <span class="opacity-75"
+          >Mi enfoque se centra en crear experiencias Web dinámicas y atractivas
+          para mis clientes.</span
+        >
+      </h2>
+
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill href="https://www.linkedin.com/in/emilacevedo/">
+			<LinkedIn class="w-6 h-6" />
+			LinkeIn
+		</SocialPill>
+		<SocialPill href="https://github.com/HenryAcevedo16">
+			<Repo class="w-6 h-6" />
+			Github
+		</SocialPill>
+    <SocialPill href="https://github.com/HenryAcevedo16">
+			<Email class="w-6 h-6" />
+			emilacevedo167@gmail.com
+		</SocialPill>
+      </nav>
+    </section>
+  </main>
+</Layout>
