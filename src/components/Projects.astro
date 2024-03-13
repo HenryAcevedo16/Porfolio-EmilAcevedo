@@ -1,0 +1,82 @@
+---
+import HTML from "../components/icons/HTML.astro";
+import Css from "./icons/Css.astro";
+import React from "../components/icons/React.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Boostrap from "./icons/Boostrap.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+
+  Css: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: Css,
+  },
+
+  React: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+
+  Javascript: {
+    name: "JS",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  },
+  Boostrap: {
+    name: "Boostrap",
+    class: "bg-black text-white",
+    icon: Boostrap,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Emastore - Tienda online de componentes electronicos",
+    description:
+      "Encuentra en nuestra tienda de computadoras los mejores equipos de escritorio, portátiles, tarjeta de video y monitores al mejor precio. Ofrecemos una amplia variedad de marcas y modelos para que puedas elegir el que más se adapte a tus necesidades. ¡Compra ahora y lleva tu experiencia tecnológica al siguiente nivel!",
+    link: "https://emastore.netlify.app/",
+    github: "https://github.com/HenryAcevedo16/Emastore",
+    image: "/public/projects/120shots_so.webp",
+    tags: [TAGS.HTML, TAGS.Css, TAGS.Javascript, TAGS.Boostrap],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-42 flex-row">
+        {tags.map((tags) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tags.class} py-1 px-2`}
+            >
+              <tags.icon class="size-4" />
+              {tags.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
