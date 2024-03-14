@@ -11,6 +11,8 @@ import Repo from "../components/icons/Repo.astro";
 import Study from "../components/Study.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro"
+import Contacto from "../components/icons/Contacto.astro"
 ---
 
 <Layout
@@ -37,7 +39,7 @@ import Projects from "../components/Projects.astro";
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span>Soy un Desarrollador Web</span><span class="text-red-200/90"
+        <span>Soy un Desarrollador Web </span><span class="text-red-200/90"
           >con sede en Santo Domingo, República Dominicana</span
         >. <span class="text-yellow-200/90"
           >Me especializo en Desarrollo Web utilizando HTML, CSS, JavaScript y
@@ -77,6 +79,13 @@ import Projects from "../components/Projects.astro";
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Contacto class="size-7" />
+        Contacto
+      </h2>
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>
