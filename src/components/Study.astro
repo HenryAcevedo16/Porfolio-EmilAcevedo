@@ -1,0 +1,47 @@
+---
+import StudyItems from "./StudyItems.astro";
+
+const STUDY = [
+  {
+    date: "Actualmente...",
+    title: "Programacion Backend",
+    company: "CoderHouse",
+    description:
+      "En este curso, estoy aprendiendo a desarrollar aplicaciones modernas utilizando Node.js y MongoDB. Estoy adquiriendo habilidades para programar en JavaScript del lado del servidor y trabajar con bases de datos. Este curso me está proporcionando una sólida base en el desarrollo backend, preparándome para futuros roles en el desarrollo de software.",
+  },
+  {
+    date: "Agosto 2023",
+    title: "React Js",
+    company: "Coderhouse",
+    description:
+      "En este curso, adquirí habilidades para desarrollar aplicaciones web utilizando React.js. Aprendí a crear componentes reutilizables y a manejar el estado y el ciclo de vida de los componentes. También me familiaricé con las herramientas y técnicas de desarrollo modernas, como el uso de JSX, el manejo de eventos, y el enrutamiento con React Router. Este curso me proporcionó una sólida base en el desarrollo frontend con React.js, una de las bibliotecas de JavaScript más populares para la construcción de interfaces de usuario.",
+    link: "https://www.coderhouse.com/latam/certificados/652e91357999ed4d51c2c08a?lang=es",
+  },
+  {
+    date: "Abril 2023",
+    title: "JavaScript",
+    company: "Coderhouse",
+    description:
+      "En este curso, adquirí una comprensión profunda de JavaScript moderno, incluyendo ES6 y características más recientes. Aprendí sobre conceptos avanzados como promesas, async/await, módulos, destructuring, spread/rest operators, y más. Este curso me permitió mantenerme al día con las últimas tendencias y prácticas en JavaScript, preparándome para desarrollar aplicaciones web más eficientes y modernas.",
+    link: "https://www.coderhouse.com/latam/certificados/649f247b4268360002c60e96?lang=es",
+  },
+  {
+    date: "Enero 2023",
+    title: "Desarrollo Web",
+    company: "Coderhouse",
+    description:
+      "En este curso, adquirí una comprensión integral del desarrollo web. Aprendí sobre HTML y CSS , dos de los tres pilares fundamentales de la web. También me familiaricé con el diseño responsivo, SEO, accesibilidad web y rendimiento. Este curso me proporcionó una base sólida en las tecnologías web estándar, preparándome para crear sitios web atractivos y funcionales desde cero.",
+    link: "https://www.coderhouse.com/latam/certificados/652e91357999ed4d51c2c08a?lang=es",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    STUDY.map((study) => (
+      <li class="mb-10 ms-4">
+        <StudyItems {...study} />
+      </li>
+    ))
+  }
+</ol>

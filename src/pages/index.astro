@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Nootebok from "../components/icons/Nootebok.astro";
+import SocialPill from "../components/SocialPill.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Email from "../components/icons/Email.astro";
+import Repo from "../components/icons/Repo.astro";
+import Study from "../components/Study.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Contacto from "../components/icons/Contacto.astro";
+import ProfileIcon from "../components/icons/ProfileIcon.astro";
+---
+
+<Layout
+  title="Porfolio de Emil Acevedo - Desarrollador y Programador Web."
+  description="Contrata a Emil Acevedo para crear tu aplicacion web. Desarrollador Web especializado en aplicaciones unicas "
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="/public/DSC_1859.jpg"
+        alt="Foto de Emil Acevedo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, Soy Emil Acevedo<a
+          href="https://www.linkedin.com/in/emilacevedo/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>Soy un Desarrollador Web </span><span class="text-red-200/90"
+          >con sede en Santo Domingo, República Dominicana</span
+        >. <span class="text-yellow-200/90"
+          >Me especializo en Desarrollo Web utilizando HTML, CSS, JavaScript y
+          React.</span
+        >
+        <span class="opacity-75"
+          >Mi enfoque se centra en crear experiencias Web dinámicas y atractivas
+          para mis clientes.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/emilacevedo/">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkeIn
+        </SocialPill>
+        <SocialPill href="https://github.com/HenryAcevedo16">
+          <Repo class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:emilacevedo167@gmail.com">
+          <Email class="size-4 md:size-6" />
+          emilacevedo167@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="estudios">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Nootebok class="size-7" />
+        Cursos Realizados
+      </h2>
+      <Study />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobremi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileIcon class="size-7" />
+        Sobre mi
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+    <SectionContainer id="contacto">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Contacto class="size-7" />
+        Contacto
+      </h2>
+      <Contact />
+    </SectionContainer>
+  </main>
+</Layout>
